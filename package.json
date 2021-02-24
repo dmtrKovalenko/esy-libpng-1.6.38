@@ -5,7 +5,7 @@
   "esy": {
     "buildsInSource": true,
     "exportedEnv": {
-      "CFLAGS": {
+      "CFLAGS":{
         "scope": "global",
         "val": "-I#{self.install / 'include'} $CFLAGS"
       },
@@ -27,7 +27,7 @@
       [
         "bash",
         "-c",
-        "./configure CPPFLAGS=#{os =='darwin' ? '' : $CPPFLAGS} LDFLAGS=#{os =='darwin' ? '' : $LDFLAGS} --disable-silent-rules --disable-dependency-tracking --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}"
+        "./configure CPPFLAGS=$CFLAGS LDFLAGS='$LDFLAGS' --disable-silent-rules --disable-dependency-tracking --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}"
       ],
       [
         "make"
@@ -39,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "esy-zlib": "esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3"
+    "esy-zlib": "dmtrKovalenko/esy-zlib#dee02ab62df4acffabd87bae75979f2dad3444de"
   },
   "resolutions": {}
 }
