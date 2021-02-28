@@ -39,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "esy-zlib": "dmtrKovalenko/esy-zlib#9f3ad296d74562d640ca039805fa4e3d5610703f"
+    // "esy-zlib": "dmtrKovalenko/esy-zlib#9f3ad296d74562d640ca039805fa4e3d5610703f"
   },
   "resolutions": {}
 }
